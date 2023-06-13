@@ -1,0 +1,46 @@
+:root {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --text-primary: black;
+  --text-secondary: white;
+  --bgColor-primary: white;
+  --contentColor: white;
+  --dashColor: rgb(15, 174, 253);
+
+  --navColor: white;
+  --navColor2: rgb(2, 91, 136);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "dash nav nav nav"
+    "dash content content content";
+  grid-template-rows: 1fr 4fr;
+  grid-column: 5rem 1fr 1fr 0.8fr;
+}
+
+.dash {
+  grid-area: dash;
+  background-color: var(--dashColor);
+  color: var(--text-secondary);
+  height: 100vh;
+  width: 5 rem;
+}
+
+.dash_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navigation {
+  grid-area: nav;
+}
+
+.content {
+  grid-area: content;
+}
