@@ -6,9 +6,10 @@
   --bgColor-primary: white;
   --contentColor: white;
   --dashColor: rgb(15, 174, 253);
-
+   --dash-width: clamp(210px 22vw 325px);
   --navColor: white;
   --navColor2: rgb(2, 91, 136);
+
 }
 
 body {
@@ -26,21 +27,89 @@ body {
   grid-area: dash;
   background-color: var(--dashColor);
   color: var(--text-secondary);
-  height: 100vh;
-  width: 5 rem;
+  height: 100%vh;
+  width:var(--dash-width);
+  /* overflow: hidden; */
 }
+
+
 
 .dash_items {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  padding: 2px 15px;
+}
+
+.dash_items >h3 , h2{
+  margin-left: 10px;
 }
 
 .navigation {
   grid-area: nav;
+  padding: 1.5rem 3rem;
+  border-bottom: 2px solid rgb(219, 219, 219);
+}
+
+.upper_nav{
+display: grid;
+grid-template-columns: 1fr max-content;
+margin-bottom: 2.5rem;
+}
+
+
+.userSearch{
+display: flex;
+align-items: center;
+margin-right: auto;
+width: 100%;
+}
+
+#searchInput{
+  background-color: rgb(233, 227, 227);
+  border-radius: 15px;
+  display: inline-block;
+  border: 0;
+  margin-left: 1.25rem;
+  width:350px ;
+}
+
+
+.smallProfile{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+font-weight: 600;
+}
+
+
+/* .notification{
+
+} */
+/* 
+.bi-file-earmark-person-fill{
+border-radius: 50%;
+box-shadow: aqua;
+border: 20px;
+border-color: blue;
+
+} */
+
+.bottom_nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.bigprofile{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .content {
   grid-area: content;
+  margin: 20px 20px;
+
 }
